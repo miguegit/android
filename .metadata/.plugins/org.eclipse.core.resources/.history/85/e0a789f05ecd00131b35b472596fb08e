@@ -1,0 +1,7 @@
+package com.example.firstone;
+
+public class Titular {
+
+	private String titulo;
+	
+}

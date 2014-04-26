@@ -1,0 +1,23 @@
+package com.example.firstone;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.Menu;
+
+public class ActivitySaludo extends Activity{
+
+	public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_saludo);
+        
+        
+        
+    }
+ 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+	
+}

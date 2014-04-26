@@ -1,0 +1,22 @@
+{
+  "/Users/migmarmac/Desktop/android/MyFirstProject/gen": {
+    "location": "/Users/migmarmac/Desktop/android/MyFirstProject/gen",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027/Users/migmarmac/Desktop/android/MyFirstProject/gen\u0027. Skipped."
+  },
+  "/Users/migmarmac/Desktop/android/FirstProject/gen": {
+    "location": "/Users/migmarmac/Desktop/android/FirstProject/gen",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027/Users/migmarmac/Desktop/android/FirstProject/gen\u0027. Skipped."
+  },
+  "/Users/migmarmac/Desktop/android/FirstOne/gen": {
+    "location": "/Users/migmarmac/Desktop/android/FirstOne/gen",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027/Users/migmarmac/Desktop/android/FirstOne/gen\u0027. Skipped."
+  },
+  "/Users/migmarmac/ANDROID/sdk/platforms/android-19/android.jar": {
+    "location": "/Users/migmarmac/ANDROID/sdk/platforms/android-19/android.jar",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027/Users/migmarmac/ANDROID/sdk/platforms/android-19/android.jar\u0027. Neither fingerprint \u00277f972d2aa0fcb741fc84a9a10c98555f6f431a7a\u0027 nor symbolic name \u0027android\u0027 are known."
+  }
+}

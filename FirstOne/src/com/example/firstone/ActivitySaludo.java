@@ -1,0 +1,26 @@
+package com.example.firstone;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.widget.TextView;
+
+public class ActivitySaludo extends Activity{
+
+	public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_saludo);
+        
+        TextView txtSaludo = (TextView)findViewById(R.id.TxtSaludo);
+        Bundle bundle = this.getIntent().getExtras();
+        txtSaludo.setText("Hola " + bundle.getString("NOMBRE"));
+        
+    }
+ 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+	
+}

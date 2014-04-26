@@ -1,0 +1,67 @@
+[
+  {
+    "symbolicName": "android-support-v4",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "cb6883d96005bc85b3e868f204507ea5b4fa9bbf",
+    "jarFileModificationDate": "2014-04-25T19:10:55+02:00",
+    "location": "/Users/migmarmac/Desktop/android/FirstOne/libs/android-support-v4.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "android-support-v4",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "cb6883d96005bc85b3e868f204507ea5b4fa9bbf",
+    "jarFileModificationDate": "2014-01-17T12:31:30+01:00",
+    "location": "/Users/migmarmac/Desktop/android/appcompat_v7/libs/android-support-v4.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "android-support-v7-appcompat",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "6c77cd21db2ca4fe31aa1fd31417fe63be29e733",
+    "jarFileModificationDate": "2014-01-17T12:31:30+01:00",
+    "location": "/Users/migmarmac/Desktop/android/appcompat_v7/libs/android-support-v7-appcompat.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "android",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "7f972d2aa0fcb741fc84a9a10c98555f6f431a7a",
+    "jarFileModificationDate": "2014-02-21T11:11:26+01:00",
+    "location": "/Users/migmarmac/ANDROID/sdk/platforms/android-19/android.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "appcompat_v7",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "9d231007989cbc17fa88c998cde2f36d6bda86ec",
+    "jarFileModificationDate": "2014-04-25T00:12:54+02:00",
+    "location": "/Users/migmarmac/Desktop/android/appcompat_v7/bin/appcompat_v7.jar",
+    "javaRuntime": false
+  }
+]

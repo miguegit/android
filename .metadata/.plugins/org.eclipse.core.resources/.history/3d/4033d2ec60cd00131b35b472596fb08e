@@ -1,0 +1,157 @@
+package com.example.firstone;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBarActivity;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.Spinner;
+import android.widget.TextView;
+
+public class MainActivity extends ActionBarActivity {
+
+	private Spinner cmbOpciones;
+	
+	private Titular[] datos3 =  new Titular[]{
+	        new Titular("T’tulo 1", "Subt’tulo largo 1"),
+	        new Titular("T’tulo 2", "Subt’tulo largo 2"),
+	        new Titular("T’tulo 3", "Subt’tulo largo 3"),
+	        new Titular("T’tulo 4", "Subt’tulo largo 4"),
+	        new Titular("T’tulo 5", "Subt’tulo largo 5")};
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+
+        final EditText txtNombre = (EditText)findViewById(R.id.TxtNombre);
+        final Button btnHola = (Button)findViewById(R.id.BtnHola);
+		
+        final String[] datos =
+                new String[]{"Elem1","Elem2","Elem3","Elem4","Elem5"};
+         
+        ArrayAdapter<String> adaptador =
+                new ArrayAdapter<String>(this,
+                    android.R.layout.simple_spinner_item, datos);    
+        
+        cmbOpciones = (Spinner)findViewById(R.id.CmbOpciones);
+        
+        adaptador.setDropDownViewResource(
+                android.R.layout.simple_spinner_dropdown_item);
+         
+        cmbOpciones.setAdapter(adaptador);
+
+        
+        ArrayAdapter<String> adaptador2 =
+        	    new ArrayAdapter<String>(this,
+        	        android.R.layout.simple_list_item_1, datos);     
+        
+        final ListView lstOpciones = (ListView)findViewById(R.id.LstOpciones);
+        
+        lstOpciones.setAdapter(adaptador2);
+        
+        
+        AdaptadorTitulares adaptador3 =
+                new AdaptadorTitulares(this);
+         
+       final ListView lstOpciones = (ListView)findViewById(R.id.LstOpciones);
+         
+        lstOpciones.setAdapter(adaptador3);
+        
+        
+       
+        
+        btnHola.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                 //Creamos el Intent
+                 Intent intent = new Intent(MainActivity.this, ActivitySaludo.class);
+
+                 //Creamos la informaci—n a pasar entre actividades
+                 Bundle b = new Bundle();
+                 b.putString("NOMBRE", txtNombre.getText().toString());
+
+                 //A–adimos la informaci—n al intent
+                 intent.putExtras(b);                 
+
+                 //Iniciamos la nueva actividad
+                 startActivity(intent);
+            }
+       });
+        
+        
+		
+	}
+	
+	
+	class AdaptadorTitulares extends ArrayAdapter {
+  		 
+	    Activity context;
+	 
+	        AdaptadorTitulares(Activity context) {
+	            super(context, R.layout.listitem_titular, datos3);
+	            this.context = context;
+	        }
+	 
+	        public View getView(int position, View convertView, ViewGroup parent) {
+	        LayoutInflater inflater = context.getLayoutInflater();
+	        View item = inflater.inflate(R.layout.listitem_titular, null);
+	 
+	        TextView lblTitulo = (TextView)item.findViewById(R.id.LblTitulo);
+	        lblTitulo.setText(datos3[position].getTitulo());
+	 
+	        TextView lblSubtitulo = (TextView)item.findViewById(R.id.LblSubTitulo);
+	        lblSubtitulo.setText(datos3[position].getSubtitulo());
+	 
+	        return(item);
+	    }
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// Handle action bar item clicks here. The action bar will
+		// automatically handle clicks on the Home/Up button, so long
+		// as you specify a parent activity in AndroidManifest.xml.
+		int id = item.getItemId();
+		if (id == R.id.action_settings) {
+			return true;
+		}
+		return super.onOptionsItemSelected(item);
+	}
+
+	/**
+	 * A placeholder fragment containing a simple view.
+	 */
+	public static class PlaceholderFragment extends Fragment {
+
+		public PlaceholderFragment() {
+		}
+
+		@Override
+		public View onCreateView(LayoutInflater inflater, ViewGroup container,
+				Bundle savedInstanceState) {
+			View rootView = inflater.inflate(R.layout.fragment_main, container,
+					false);
+			return rootView;
+		}
+	}
+
+}
